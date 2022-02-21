@@ -40,9 +40,9 @@ function DataView(props) {
   console.log("TEXT");
 
   if (props.loading) {
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       className: "App"
-    }, _react.default.createElement(_reactLoaderSpinner.default, {
+    }, /*#__PURE__*/_react.default.createElement(_reactLoaderSpinner.default, {
       type: "Grid",
       color: "#D3D3D3",
       height: "50",
@@ -53,7 +53,7 @@ function DataView(props) {
   var countViews = props.datapackage.views ? props.datapackage.views.length : 0;
 
   if (countViews === 0) {
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       className: "App"
     }, t('No views available'));
   }
@@ -68,16 +68,16 @@ function DataView(props) {
     if (view.specType === 'table' && view.resources[0]._values) {
       var data = (0, _datapackageRender.getResourceCachedValues)(view.resources[0], true);
       var schema = view.resources[0].schema || {};
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement(_Table.default, {
+      }, /*#__PURE__*/_react.default.createElement(_Table.default, {
         data: data,
         schema: schema
       }));
     } else if (view.specType === 'map' && view.resources[0]._values) {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement(_Map.default, {
+      }, /*#__PURE__*/_react.default.createElement(_Map.default, {
         data: view.resources[0]._values
       }));
     } else if (view.specType === 'tabularmap' && view.resources[0]._values) {
@@ -85,20 +85,20 @@ function DataView(props) {
 
       try {
         geoData = (0, _utils.default)(view);
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           className: "App"
-        }, _react.default.createElement(_Map.default, {
+        }, /*#__PURE__*/_react.default.createElement(_Map.default, {
           data: geoData
         }));
       } catch (e) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           className: e
         });
       }
     } else if (view.specType === 'document') {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement(_Document.default, {
+      }, /*#__PURE__*/_react.default.createElement(_Document.default, {
         file: view.resources[0].path
       }));
     } else if (view.specType === 'simple') {
@@ -108,14 +108,14 @@ function DataView(props) {
         plotlySpec = (0, _datapackageRender.simpleToPlotly)(view);
 
         if (plotlySpec) {
-          return _react.default.createElement("div", {
+          return /*#__PURE__*/_react.default.createElement("div", {
             className: "App"
-          }, _react.default.createElement(_Chart.default, {
+          }, /*#__PURE__*/_react.default.createElement(_Chart.default, {
             spec: plotlySpec
           }));
         }
       } catch (e) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           className: e
         });
       }
@@ -126,14 +126,14 @@ function DataView(props) {
         _plotlySpec = (0, _datapackageRender.plotlyToPlotly)(view);
 
         if (_plotlySpec) {
-          return _react.default.createElement("div", {
+          return /*#__PURE__*/_react.default.createElement("div", {
             className: "App"
-          }, _react.default.createElement(_Chart.default, {
+          }, /*#__PURE__*/_react.default.createElement(_Chart.default, {
             spec: _plotlySpec
           }));
         }
       } catch (e) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           className: e
         });
       }
@@ -142,34 +142,34 @@ function DataView(props) {
 
       try {
         vegaSpec = (0, _datapackageRender.vegaToVega)(view);
-        return _react.default.createElement(_reactVega.default, {
+        return /*#__PURE__*/_react.default.createElement(_reactVega.default, {
           spec: vegaSpec
         });
       } catch (e) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           className: e
         });
       }
     } else if (view.specType === 'web') {
       var src = view.page_url || view.resources[0].path;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement("iframe", {
+      }, /*#__PURE__*/_react.default.createElement("iframe", {
         src: src,
         width: "100%",
         height: "475px"
       }, t('Your browser doesn\'t support "iframe".')));
     } else if (view.resources[0].unavailable || view.specType === 'unsupported') {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement("p", null, t('Data view unavailable.')), _react.default.createElement("a", {
+      }, /*#__PURE__*/_react.default.createElement("p", null, t('Data view unavailable.')), /*#__PURE__*/_react.default.createElement("a", {
         href: view.resources[0].path,
         className: "text-primary font-bold"
       }, t('Download the data.')));
     } else {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement(_reactLoaderSpinner.default, {
+      }, /*#__PURE__*/_react.default.createElement(_reactLoaderSpinner.default, {
         type: "Grid",
         color: "#D3D3D3",
         height: "50",

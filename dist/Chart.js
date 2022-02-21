@@ -24,7 +24,7 @@ function _default(props) {
     });
   }
 
-  return _react.default.createElement(Plot, _extends({}, props.spec, {
+  return /*#__PURE__*/_react.default.createElement(Plot, _extends({}, props.spec, {
     layout: {
       autosize: true
     },

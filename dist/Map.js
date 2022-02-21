@@ -37,32 +37,32 @@ function _default(props) {
     // Find the center of the LatLngBounds returns LatLng
     var center = bounds.getCenter();
     center = [center.lat, center.lng];
-    return _react.default.createElement(_reactLeaflet.Map, {
+    return /*#__PURE__*/_react.default.createElement(_reactLeaflet.Map, {
       center: center,
       zoom: 10,
       style: {
         width: '100%',
         height: 450
       }
-    }, _react.default.createElement(_reactLeaflet.TileLayer, {
+    }, /*#__PURE__*/_react.default.createElement(_reactLeaflet.TileLayer, {
       attribution: "&copy <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    }), _react.default.createElement(_reactLeaflet.GeoJSON, {
+    }), /*#__PURE__*/_react.default.createElement(_reactLeaflet.GeoJSON, {
       data: props.data,
       onEachFeature: onEachFeature
     }));
   }
 
-  return _react.default.createElement(_reactLeaflet.Map, {
+  return /*#__PURE__*/_react.default.createElement(_reactLeaflet.Map, {
     bounds: bounds,
     style: {
       width: '100%',
       height: 450
     }
-  }, _react.default.createElement(_reactLeaflet.TileLayer, {
+  }, /*#__PURE__*/_react.default.createElement(_reactLeaflet.TileLayer, {
     attribution: "&copy <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
     url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  }), _react.default.createElement(_reactLeaflet.GeoJSON, {
+  }), /*#__PURE__*/_react.default.createElement(_reactLeaflet.GeoJSON, {
     data: props.data,
     onEachFeature: onEachFeature
   }));

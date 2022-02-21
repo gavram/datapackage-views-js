@@ -16,9 +16,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 jest.mock('./Chart.js', function () {
   return function (props) {
     if (props.spec && props.spec.data && props.spec.layout) {
-      return _react.default.createElement("div", null, "Stubbed Chart");
+      return /*#__PURE__*/_react.default.createElement("div", null, "Stubbed Chart");
     }
 
-    return _react.default.createElement("div", null, "Wrong Chart");
+    return /*#__PURE__*/_react.default.createElement("div", null, "Wrong Chart");
   };
 });

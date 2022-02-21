@@ -29,9 +29,9 @@ function getLonLat(row, fields) {
 function tableToGeoData(view) {
   view.spec = view.spec || {};
   view.resources[0].schema = view.resources[0].schema || {
-    fields: [] // Return object template:
+    fields: []
+  }; // Return object template:
 
-  };
   var geoData = {
     type: 'FeatureCollection',
     features: []

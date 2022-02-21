@@ -41,7 +41,7 @@ export default class Table extends React.Component {
             Header: field.name,
             accessor: field.name,
             Cell: props => <div className={field.type || ''}>
-              <span>{props.value}</span>
+              <a>{props.value}</a>
             </div>
           }
         })}
