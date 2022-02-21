@@ -16,6 +16,8 @@ export function DataView(props) {
 
   const { t } = useTranslation();
 
+  console.log("TEXT");
+
   if (props.loading) {
     return (
       <div className="App">

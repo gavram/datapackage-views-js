@@ -37,6 +37,8 @@ function DataView(props) {
   var _useTranslation = (0, _reactI18next.useTranslation)(),
       t = _useTranslation.t;
 
+  console.log("TEXT");
+
   if (props.loading) {
     return _react.default.createElement("div", {
       className: "App"
